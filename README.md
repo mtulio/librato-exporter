@@ -21,7 +21,9 @@ The binary will be created on `./bin` dir.
 ### REQUIRED
 
 `-librato.email` : Librato's Account Email
+
 `-librato.token` : Librato's Account Token
+
 `-metrics.filter` : Librato's metrics to be gathered sepparated by comma
 
 ### OPTIONAL
@@ -29,12 +31,15 @@ The binary will be created on `./bin` dir.
 * Exporter API context
 
 `-web.listen-address` : HTTP port for the exporter API. Default: `9800`
+
 `-web.telemetry-path` : HTTP path for the exporter API. Default: `/metrics`
 
 * Librato context
 
 `-librato.account` : the Alias name of Librato's Account. This Alias will be used to a Prometheus metric subsystem. In the example above, the value of `<AccountAlias>` will be overrided. Default: `app`
+
 `-librato.interval` : the interval in seconds that the exporter will retrieve metrics from Librato API. Default: `300`
+
 `-librato.offset` : the offset in seconds that the exporter will calculate the `time_start` timestamp. Default: `120`
 
 * Metrics context
