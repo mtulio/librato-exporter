@@ -1,7 +1,13 @@
 # GgoReleaser configuration.
 builds:
-- env:
-  - CGO_ENABLED=0
+-
+  env:
+    - CGO_ENABLED=0
+  ldflags:
+    - -s -w
+    - -X main.VersionFull={{ .Version }}
+    - -X main.VersionCommit={{ .Env.APP_COMMIT }}
+    - -X main.VersionTag={{ .Tag }}
 archive:
   replacements:
     darwin: Darwin

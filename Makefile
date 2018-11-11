@@ -53,4 +53,5 @@ tag:
 # Release tool
 # https://goreleaser.com/introduction/
 release:
-	goreleaser --rm-dist
+	. ./hack/env-build.sh && \
+		goreleaser --rm-dist
