@@ -5,7 +5,7 @@ builds:
     - CGO_ENABLED=0
   ldflags:
     - -s -w
-    - -X main.VersionFull={{ .Version }}
+    - -X main.VersionFull={{ .Tag }}
     - -X main.VersionCommit={{ .Env.APP_COMMIT }}
     - -X main.VersionTag={{ .Tag }}
 archive:
