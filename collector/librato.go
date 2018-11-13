@@ -28,7 +28,7 @@ func initLibratoCollector() {
 	registerCollector(libratoCollectorSubsystem, defaultEnabled, NewLibratoCollector)
 }
 
-//NewStkTestCollector is a Status Cake Test Collector
+//NewLibratoCollector is a Librato Collector
 func NewLibratoCollector() (Collector, error) {
 	var metrics []libratoCollectorMetric
 	for m := range globalLibAPI.Metrics {
